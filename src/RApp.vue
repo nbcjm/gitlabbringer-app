@@ -1,16 +1,15 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <menu-toggle-icon></menu-toggle-icon>
   <router-view></router-view>
 </template>
 
 
 
 <script>
+import MenuToggleIcon from "@/components/Sidebar/menu-toggle-icon";
 export default {
   name: "RApp.vue",
+  components: {MenuToggleIcon},
 }
 </script>
 
