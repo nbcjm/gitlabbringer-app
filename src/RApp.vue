@@ -1,15 +1,15 @@
 <template>
-  <menu-toggle-icon></menu-toggle-icon>
+  <side-bar></side-bar>
   <router-view></router-view>
 </template>
 
 
 
 <script>
-import MenuToggleIcon from "@/components/Sidebar/menu-toggle-icon";
+import SideBar from "@/components/Sidebar/side-bar";
 export default {
   name: "RApp.vue",
-  components: {MenuToggleIcon},
+  components: {SideBar},
 }
 </script>
 

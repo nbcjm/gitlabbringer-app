@@ -1,4 +1,6 @@
 #left-toggle-icon {
+  height: 30px;
+  width: 50px;
 
   html,body { height: 100%; }
 
@@ -8,17 +10,18 @@
   }
 
   button {
-    cursor: pointer;
+    //cursor: pointer;
   }
 
   button:focus {
     outline: 0;
   }
 
-  height: auto;
+  background-color: darkgrey;
 
   .left-toggle-button {
     position: relative;
+    left: 10px;
     height: 30px;
     width: 30px;
     padding: 0;
@@ -32,38 +35,60 @@
   }
 
   .bar {
+    box-sizing:border-box;
     z-index: 1000;
-    background-color: #000;
+    //background-color: #000;
+    background: linear-gradient(70deg, #ef8250 35%, #fec2a4, #fed8a4);
     display: block;
     width: auto;
-    height: 3.2px;
-    margin-top: 5.5px;
+    height: 3.3px;
+    margin-top: 3.3px;
+    margin-bottom: 3.5px;
     transform-origin: 100% 50%;
+    transform: rotate(0.00001deg);
     transition: transform .6s cubic-bezier(.165,.84,.44,1),opacity .3s cubic-bezier(.165,.84,.44,1),background-color .6s cubic-bezier(.165,.84,.44,1);
   }
 
-  .left-toggle-button:hover .bar:nth-child(1) {
+}
+
+#left-toggle-icon:hover{
+
+  .bar:nth-child(1) {
     transform-origin: 100% 50% ;
-    transform: translateX(+2.5px) scaleX(.8);
+    transform: translateX(+3.8px) scaleX(.8);
   }
 
-  .left-toggle-button:hover .bar:nth-child(3) {
-    transform-origin: 100% 50%;
-    transform: translateX(+2.5px) scaleX(.8);
-  }
 
+  .bar:nth-child(3) {
+    transform-origin: 100% 50% ;
+    transform: translateX(+3.8px) scaleX(.8);
+  }
 
 }
 
-#left-toggle-icon.opened {
-  .left-toggle-button {
-    .bar:nth-child(1) {
-      transform: translateX(-20.5px) rotate(-40deg) scaleX(.5);
-    }
+#left-toggle-icon.opened .left-toggle-button{
 
-    .bar:nth-child(3) {
-      transform: translateX(-20.5px) rotate(40deg) scaleX(.5);
-    }
+  .bar:nth-child(1) {
+    transform: translateX(-20.5px) rotate(-40deg) scaleX(.4);
+  }
+
+  .bar:nth-child(3) {
+    transform: translateX(-20.5px) rotate(40deg) scaleX(.4);
+  }
+
+}
+#left-toggle-icon.opened:hover {
+
+  .bar:nth-child(1) {
+    transform: translateX(-11.5px) rotate(-40deg) scaleX(.4);
+  }
+
+  .bar:nth-child(2) {
+    transform: translateX(+9px) rotate(0.00001deg);
+  }
+
+  .bar:nth-child(3) {
+    transform: translateX(-11.5px) rotate(40deg) scaleX(.4);
   }
 
 }

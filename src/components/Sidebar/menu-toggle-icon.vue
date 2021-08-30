@@ -1,6 +1,6 @@
 <template>
   <div id="left-toggle-icon" :class="{opened : opened}" @click="toggle">
-    <button type="button" class="left-toggle-button" title="Menu">
+    <button type="button" class="left-toggle-button" :title=icontitle>
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -20,6 +20,11 @@ export default {
   methods: {
     toggle() {
       return this.opened = !this.opened
+    }
+  },
+  computed: {
+    icontitle() {
+      return this.opened ? "Collapse" : "Expand"
     }
   }
 }
